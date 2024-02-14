@@ -12,7 +12,7 @@ variables:
   azureSubscription: 'ME-MngEnvMCAP912021-ChrisTremblay-1 (d78f13dc-7a87-4739-9378-90158bfd7848)'
 
   # Web app name
-  webAppName: 'chtremblnodesample'
+  webAppName: 'chtremblnode'
 
   # Environment name
   environmentName: 'Development'
