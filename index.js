@@ -53,9 +53,30 @@ app.options('*', cors());
 // Configure routes
 const router = express.Router();
 
-// Hello World for index page
+// index page
 app.get('/', function (req, res) {
-    return res.send("Hello World!");
+    //return res.send("Hello World!");
+    //return html with a form post
+    res.send(`
+    <html>
+    <head>
+    <title>Upload API</title>
+    </head>
+    <body>
+    <h1>Upload API</h1>
+    <form action="/upload" method="post">
+    <label for="user">Name:</label><br>
+    <input type="text" id="name" name="name" value=""><br>
+    <input type="submit" value="upload">
+    </form>
+    </body>
+    </html>
+    `);
+})
+
+// upload page
+app.post('/upload', function (req, res) {
+  return res.send("Hello "+req.body.name+"!");
 })
 
 app.get('/api', function (req, res) {
