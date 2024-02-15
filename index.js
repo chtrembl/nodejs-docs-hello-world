@@ -55,8 +55,6 @@ const router = express.Router();
 
 // index page
 app.get('/', function (req, res) {
-    //return res.send("Hello World!");
-    //return html with a form post
     res.send(`
     <html>
     <head>
